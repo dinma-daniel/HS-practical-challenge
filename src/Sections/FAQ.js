@@ -10,8 +10,8 @@ export default function FAQ() {
   return (
     <div className='mx-4 md:mx-20 lg:mx-60 mt-40 min-h-[55vh]'>
       <div className='flex flex-col md:flex-row md:justify-between gap-6 mb-10 md:mb-20'>
-        <h4 className='text-brand-primary text-4xl md:text-5xl leading-tight md:leading-14 font-medium w-full md:w-2/5 text-left'>Frequently asked questions</h4>
-        <div className='flex gap-3 items-center'>
+        <h4 className='text-brand-primary text-4xl md:text-5xl leading-tight md:leading-14 font-medium w-full md:w-2/5 text-left'>Frequently asked Questions</h4>
+        <div className='flex flex-col md:flex-row gap-3 items-start md:items-center'>
           <label htmlFor="filter" className='font-light text-base text-brand-text opacity-50'>Filter by:</label>
           <div className='relative'>
             <select name="filter" id="filter" className='rounded-full bg-white text-brand-primary font-medium border border-neutral-200 appearance-none text-lg py-2 pl-4 pr-9 cursor-pointer focus:outline-none focus:ring-1 focus:ring-brand-primary'>
