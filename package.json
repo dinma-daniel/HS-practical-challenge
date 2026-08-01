@@ -2,7 +2,7 @@
   "name": "template-page",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://harbour.space",
+  "homepage": ".",
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
     "@testing-library/dom": "^10.4.1",
@@ -15,8 +15,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "fetch-data": "node scripts/fetch-scholarship.js",
+    "prestart": "npm run fetch-data",
     "start": "react-scripts start",
-    "dev": "react-scripts start",
+    "dev": "npm run start",
+    "prebuild": "npm run fetch-data",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

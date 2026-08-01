@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 import { normalizeScholarship } from './normalizeScholarship'
 
 const ScholarshipContext = createContext(null)
-const ENDPOINT = '/api/v1/scholarship_pages'
+const ENDPOINT = 'data'
 
 export function ScholarshipProvider({ slug, children }) {
   const [state, setState] = useState({ data: null, loading: true, error: null })
@@ -11,7 +11,7 @@ export function ScholarshipProvider({ slug, children }) {
     let cancelled = false
     setState({ data: null, loading: true, error: null })
 
-    fetch(`${ENDPOINT}/${slug}`, { headers: { Accept: 'application/json' } })
+    fetch(`${ENDPOINT}/${slug}.json`, { headers: { Accept: 'application/json' } })
       .then((res) => {
         if (!res.ok) throw new Error(`Request failed: HTTP ${res.status}`)
         return res.json()
