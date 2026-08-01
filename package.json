@@ -24,6 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://dinma-daniel.github.io/HS-practical-challenge",
   "eslintConfig": {
     "extends": [
       "react-app",
