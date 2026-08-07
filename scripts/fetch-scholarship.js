@@ -1,13 +1,5 @@
 /**
- * Fetches the scholarship payload at build time and writes it to public/data/.
- *
- * The Harbour.Space API answers with a fixed `Access-Control-Allow-Origin:
- * https://harbour.space`, so the browser blocks a direct fetch from anywhere
- * else (GitHub Pages included). Node has no such restriction, so we snapshot
- * the JSON here and ship it as a static asset.
- *
- * The snapshot is committed, so a network failure leaves the previous copy in
- * place instead of breaking the build.
+ * Fetched the scholarship payload at build time and writes it to public/data/.
  */
 const fs = require('fs')
 const path = require('path')
